@@ -10,7 +10,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: yarn install
       - run: yarn build
-      - run: mv sw.js docs/
       - run: mv googled29fba422c357ff8.html docs/
       - run: mv robots.txt docs/
       - run: mv ads.txt docs/
@@ -26,10 +25,9 @@ jobs:
       - run: mv new/ docs/
       - run: mv action/ docs/
       - run: mv best/ docs/
-      - run: node sitemap.js
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs
-          cname: vscode-api.js.org
+          cname: www.vscodeapi.com
