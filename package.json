@@ -3,7 +3,7 @@
   "description": "VS Code API is a set of JavaScript APIs that you can invoke in your Visual Studio Code extension. This page lists all VS Code APIs available to extension authors.",
   "license": "MIT",
   "scripts": {
-    "build": "typedoc && cp -r public/ docs/",
+    "build": "typedoc && cp -r public/* docs/",
     "dev": "onchange -i 'vscode.d.ts' 'typedoc.json' 'README.md' 'theme/**/*' -- yarn build",
     "start": "serve docs/"
   },
